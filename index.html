@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax!</title>
+
+  <style>
+    body {
+      /* height: 100%; */
+      margin: 0 auto;
+      background: #F5F5F5;
+      /* display: flex; */
+    }
+
+    .container {
+      display: flex;
+      /* justify-content: center; */
+
+      /* align-items: center; */
+      width: 100%;
+      /* min-height: 2000px; */
+    }
+
+    .content-right {
+      margin-right: 350px
+    }
+
+    .content-left {
+      margin-left: 350px;
+    }
+
+    .title {
+      left: 0;
+      right: 0;
+      height: 350px;
+      margin-top: 250px;
+      align-items: center;
+      display: flex;
+      position: absolute;
+      justify-content: center;
+      background: #5E7685;
+      color: white;
+    }
+
+    .people {
+      right: 0;
+      width: 100px;
+      height: 100%;
+      display: flex;
+      position: absolute;
+      background-size: contain;
+      justify-content: flex-end;
+      background-repeat: repeat;
+      background-image: url('./assets/people-background.png');
+    }
+
+    .people-beach {
+      right: 0;
+      width: 150px;
+      height: 1300px;
+      display: flex;
+      margin-top: 1200px;
+      position: absolute;
+      background-size: contain;
+      justify-content: flex-end;
+      background-repeat: no-repeat;
+      background-image: url('./assets/people-beach.png');
+    }
+
+    .boat {
+      top: 1800px;
+      left: 80px;
+      width: 30px;
+      height: 200px;
+      display: flex;
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url('./assets/boat.png');
+    }
+
+    .shark {
+      top: 2000px;
+      left: 130px;
+      width: 70px;
+      height: 200px;
+      display: flex;
+      transform: rotate(-15deg);
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url('./assets/shark-left.png');
+    }
+
+    .whale {
+      top: 2850px;
+      left: 130px;
+      width: 65px;
+      height: 200px;
+      display: flex;
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url('./assets/whale.png');
+    }
+
+    .whales-group {
+      top: 2900px;
+      left: 150px;
+      width: 70px;
+      height: 200px;
+      display: flex;
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url('./assets/whales-group.png');
+    }
+
+    .bird {
+      top: 3400px;
+      right: 65px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url('./assets/bird.png');
+    }
+
+    .bird:nth-child(odd) {
+      right: 160px;
+      top: 3750px;
+    }
+
+    .bird:nth-child(even) {
+      right: 200px;
+    }
+
+    .birds-right {
+      top: 2300px;
+      right: 100px;
+      width: 350px;
+      height: 350px;
+      display: flex;
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url('./assets/birds.png');
+    }
+
+    .birds-center {
+      top: 3300px;
+      right: 390px;
+      width: 275px;
+      height: 275px;
+      display: flex;
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url('./assets/birds-2.png');
+    }
+
+    .beach {
+      position: relative;
+      top: 450px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      display: flex;
+      margin: 0 auto;
+      margin-top: 500px;
+      margin-bottom: 600px;
+      min-height: 1920px;
+      justify-content: center;
+      background-size: 1200px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: contain;
+      background-image: url('./assets/beach-2.jpg');
+    }
+
+    .sunset {
+      left:0;
+      right: 0;
+      /* bottom: 0; */
+      margin: 0 auto;
+      width: 1200px;
+      height: 900px;
+      display: flex;
+      position: relative;
+}
+
+    .main-background {
+      position: absolute;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+    }
+
+  </style>
+
+</head>
+<body>
+  
+  <div class="container">
+    <div class="title rellax" data-rellax-speed="-5">
+      <h1>A day in the beach</h1>
+    </div>
+    <div class="main-background rellax" data-rellax-speed="-7">
+      <div class="beach"></div>
+      <!-- <div class="sunset"></div> -->
+    </div>
+    <div class="content-right people-beach rellax" data-rellax-speed="-5"></div>
+    <div id="shark" class="content-left shark rellax" data-rellax-speed="-1"></div>
+    <div class="content-left boat rellax" data-rellax-speed="1"></div>
+    <div class="content-right birds-right rellax" data-rellax-speed="4"></div>
+    <div class="content-right birds-center rellax" data-rellax-speed="4"></div>
+    <div class="content-right bird rellax" data-rellax-speed="5"></div>
+    <div class="content-right bird rellax" data-rellax-speed="3"></div>
+    <div class="content-right bird rellax" data-rellax-speed="1"></div>
+    <div class="content-left whale rellax" data-rellax-speed="0"></div>
+    <div class="content-left whales-group rellax" data-rellax-speed="-1"></div>
+  </div>
+
+
+  <script src="./rellax.min.js"></script>
+  <script>
+    var rellax = new Rellax('.rellax');
+
+    var dot = false;
+    const onScroll = () => {
+      const image = document.getElementById("shark"); 
+      if (dot) {
+        image.src = "https://media.geeksforgeeks.org/wp-content/uploads/geeksforgeeks-6.png"; 
+        shark.style = "background-image: url('./assets/shark-left.png');"
+      } else {
+        shark.style = "background-image: url('./assets/shark-right.png');"
+      }
+
+      dot = !dot;
+    }
+
+    window.addEventListener('wheel', onScroll, false);
+  </script>
+
+</body>
+</html>
